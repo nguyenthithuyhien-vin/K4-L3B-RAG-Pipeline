@@ -17,6 +17,7 @@ ROOT = Path(__file__).resolve().parents[1]
 GOLDEN_PATH = ROOT / "group_project" / "evaluation" / "golden_dataset.json"
 RESULT_JSON = ROOT / "group_project" / "evaluation" / "ab_scores.json"
 RESULT_MD = ROOT / "group_project" / "evaluation" / "RESULT.md"
+RESULT_MD_REPORTS = ROOT / "reports" / "RESULT.md"
 SAFE_REFUSAL = "Tôi không thể xác minh thông tin này từ nguồn hiện có."
 
 
@@ -287,7 +288,9 @@ def _write_result_md(payload: dict, metric_source: str) -> None:
             "",
         ]
     )
-    RESULT_MD.write_text("\n".join(lines), encoding="utf-8")
+    content = "\n".join(lines)
+    RESULT_MD.write_text(content, encoding="utf-8")
+    RESULT_MD_REPORTS.write_text(content, encoding="utf-8")
 
 
 def main() -> None:
@@ -325,6 +328,7 @@ def main() -> None:
     _write_result_md(payload, metric_source)
     print(f"Saved {RESULT_JSON}")
     print(f"Saved {RESULT_MD}")
+    print(f"Saved {RESULT_MD_REPORTS}")
 
 
 if __name__ == "__main__":

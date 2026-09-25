@@ -9,8 +9,11 @@ Chatbot RAG trả lời câu hỏi về **phương thức xét tuyển, chỉ ti
 - ≥3 PDF chính sách HUST + ≥5 bài tin/thông báo đã chuẩn hóa Markdown
 - Pipeline: convert → chunk → index → dense + BM25 → RRF → fallback → generation có citation
 - Chatbot Streamlit hiển thị câu trả lời và nguồn
-- Golden dataset 18 câu; A/B dense-only vs hybrid + RRF trong `group_project/evaluation/RESULT.md`
-- Báo cáo cá nhân: `reports/solo-nguyen-hien.md`
+- Golden dataset 18 câu; A/B dense-only vs hybrid + RRF trong `group_project/evaluation/RESULT.md` (đồng bộ `reports/RESULT.md`)
+- Báo cáo cá nhân (2 thành viên):
+  - `reports/nguyen-hien.md` — data, convert, index, dense/BM25
+  - `reports/thanh-vien-2.md` — RRF/fallback, generation, UI, evaluation  
+  (đổi tên file thành `<mssv>-<short-name>.md` và điền MSSV/họ tên trước khi nộp)
 
 ## Quick start
 
