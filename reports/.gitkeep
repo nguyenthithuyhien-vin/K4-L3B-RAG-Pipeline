@@ -1,0 +1,47 @@
+# Individual contribution report
+
+## Thông tin
+
+- Họ và tên: Nguyen Hien
+- Mã học viên: 2A202602896
+- Nhóm: Solo / K4-L3B Day 8
+- Repository/branch: K4-L3B-RAG-Pipeline / main
+
+## Phần việc đã thực hiện
+
+| Module/deliverable | Việc tôi trực tiếp làm | File/commit/PR | Trạng thái |
+|---|---|---|---|
+| Data collection | Crawl 3 PDF HUST + 5 bài tin tuyển sinh | `src/task1_*.py`, `src/task2_*.py` | Done |
+| Convert Markdown | MarkItDown + JSON→MD | `src/task3_convert_markdown.py` | Done |
+| Chunk/embed/index | Recursive chunk + BGE-M3 + Chroma | `src/task4_chunking_indexing.py` | Done |
+| Hybrid retrieval | Dense, BM25(+overlap), RRF, fallback | `src/task5`–`task9` | Done |
+| Generation + UI | gpt-4o citation + Streamlit chat | `src/task10_generation.py`, `app.py` | Done |
+| Evaluation | Golden 18 Q&A, A/B dense vs hybrid, RESULT | `group_project/evaluation/*` | Done |
+
+## Quyết định kỹ thuật quan trọng
+
+1. **Quyết định:** Dùng hybrid dense + BM25 + RRF làm mặc định; dense-only chỉ cho A/B.  
+   **Lý do/evidence:** A/B cho thấy hybrid tăng context recall (+0.055) và precision (+0.044).  
+   **Trade-off:** Latency tăng nhẹ vì thêm BM25 trên toàn bộ chunks.
+
+2. **Quyết định:** `SCORE_THRESHOLD=0.55` dựa trên cosine dense in-domain (~0.66) vs out-of-domain (~0.47).  
+   **Lý do/evidence:** Calibrate trên query tuyển sinh vs query ngoài domain.  
+   **Trade-off:** Threshold cao có thể kích hoạt fallback thường hơn; PageIndex không cấu hình nên trả lại hybrid.
+
+## Kiểm thử và kết quả
+
+- Test hoặc query tôi đã dùng: `pytest tests/test_contracts.py`; query “chỉ tiêu tuyển sinh 2025”, “học phí chương trình chuẩn”, “cách nấu phở”
+- Kết quả trước/sau nếu có: Contracts 15/15 pass; hybrid trả đúng 9.680 chỉ tiêu; out-of-domain dense score ~0.47
+- Lỗi đã phát hiện và cách xử lý: BM25 Okapi IDF=0 trên corpus nhỏ → cộng token-overlap; DNS `www.hust.edu.vn` → URL dự phòng không www
+
+## Điều còn hạn chế
+
+- Một hạn chế cụ thể của phần tôi làm: Evaluation dùng heuristic khi thiếu API key; cần chạy lại ragas với gpt-4o khi có key
+- Nếu có thêm thời gian, thay đổi đầu tiên tôi sẽ thực hiện: Chunk theo section heading cho bảng học phí/điểm chuẩn
+
+## Xác nhận đóng góp
+
+Tôi xác nhận nội dung trên phản ánh đúng phần việc của mình và có thể giải thích hoặc chạy lại trong buổi demo.
+
+- Ngày: 2025-09-25
+- Tên thành viên: Nguyen Hien

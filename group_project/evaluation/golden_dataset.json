@@ -1,0 +1,92 @@
+[
+  {
+    "question": "Đại học Bách khoa Hà Nội năm 2025 dự kiến tuyển bao nhiêu sinh viên?",
+    "expected_answer": "Năm 2025 ĐHBK Hà Nội dự kiến tuyển khoảng 9.680 sinh viên.",
+    "expected_context": "chỉ tiêu tuyển sinh dự kiến 9.680 sinh viên"
+  },
+  {
+    "question": "ĐHBK Hà Nội năm 2025 dùng bao nhiêu phương thức xét tuyển chính?",
+    "expected_answer": "Có 3 phương thức: xét tuyển tài năng (XTTN), xét theo điểm Đánh giá tư duy (ĐGTD), và xét theo điểm thi tốt nghiệp THPT.",
+    "expected_context": "3 phương thức xét tuyển XTTN ĐGTD THPT"
+  },
+  {
+    "question": "Tỷ lệ chỉ tiêu dự kiến của phương thức xét tuyển tài năng là bao nhiêu?",
+    "expected_answer": "Phương thức XTTN chiếm khoảng 20% chỉ tiêu.",
+    "expected_context": "XTTN khoảng 20%"
+  },
+  {
+    "question": "Tỷ lệ chỉ tiêu dự kiến của phương thức Đánh giá tư duy là bao nhiêu?",
+    "expected_answer": "Phương thức ĐGTD chiếm khoảng 40% chỉ tiêu.",
+    "expected_context": "ĐGTD khoảng 40%"
+  },
+  {
+    "question": "Tỷ lệ chỉ tiêu dự kiến của phương thức xét điểm thi tốt nghiệp THPT là bao nhiêu?",
+    "expected_answer": "Phương thức THPT chiếm khoảng 40% chỉ tiêu.",
+    "expected_context": "THPT khoảng 40%"
+  },
+  {
+    "question": "Học phí chương trình chuẩn khóa 2025 (K70) năm học 2025-2026 khoảng bao nhiêu?",
+    "expected_answer": "Các chương trình chuẩn khoảng 28 đến 35 triệu đồng/năm học tùy ngành.",
+    "expected_context": "học phí chương trình chuẩn 28 đến 35 triệu đồng/năm học"
+  },
+  {
+    "question": "Học phí chương trình ELITECH khóa 2025 khoảng bao nhiêu?",
+    "expected_answer": "ELITECH khoảng 35 đến 45 triệu đồng/năm học; một số chương trình đặc thù có thể cao hơn.",
+    "expected_context": "học phí ELITECH 35 đến 45 triệu đồng/năm học"
+  },
+  {
+    "question": "Phương thức xét tuyển tài năng gồm những diện nào?",
+    "expected_answer": "Gồm xét tuyển thẳng theo quy định Bộ GD&ĐT (diện 1.1), xét theo chứng chỉ quốc tế (diện 1.2), và xét hồ sơ năng lực kết hợp phỏng vấn (diện 1.3).",
+    "expected_context": "XTTN diện 1.1 1.2 1.3 chứng chỉ quốc tế hồ sơ năng lực"
+  },
+  {
+    "question": "Chứng chỉ quốc tế nào được dùng trong xét tuyển tài năng diện 1.2?",
+    "expected_answer": "Có thể dùng SAT, ACT, A-Level, AP và IB theo quy định XTTN.",
+    "expected_context": "chứng chỉ SAT ACT A-Level AP IB"
+  },
+  {
+    "question": "Bài thi Đánh giá tư duy gồm những phần nào?",
+    "expected_answer": "Gồm tư duy Toán học, tư duy Đọc hiểu và tư duy Khoa học/Giải quyết vấn đề.",
+    "expected_context": "tư duy toán học đọc hiểu khoa học giải quyết vấn đề"
+  },
+  {
+    "question": "Thí sinh đăng ký thi Đánh giá tư duy ở đâu?",
+    "expected_answer": "Đăng ký trực tuyến tại https://tsa.hust.edu.vn và nộp lệ phí theo hướng dẫn.",
+    "expected_context": "đăng ký trực tuyến tsa.hust.edu.vn"
+  },
+  {
+    "question": "Tổ hợp K01 xét tuyển theo công thức điểm nào?",
+    "expected_answer": "ĐX = [(Toán x 3 + Ngữ Văn x 1 + Lý/Hóa/Sinh/Tin x 2) x 1/2] + Điểm ưu tiên, thang điểm 30.",
+    "expected_context": "tổ hợp K01 Toán x 3 Ngữ Văn x 1"
+  },
+  {
+    "question": "Điểm xét theo ĐGTD (tổ hợp K00) được tính thế nào?",
+    "expected_answer": "ĐX = Điểm thi ĐGTD + Điểm ưu tiên quy về thang 100 + Điểm thưởng (nếu có), thang điểm 100.",
+    "expected_context": "ĐX Điểm thi ĐGTD Điểm ưu tiên Điểm thưởng thang điểm 100"
+  },
+  {
+    "question": "Điểm thi ĐGTD dùng để xét tuyển lấy lần thi nào?",
+    "expected_answer": "Lấy điểm cao nhất trong các lần thi ĐGTD năm 2024 và 2025.",
+    "expected_context": "điểm cao nhất các lần thi ĐGTD năm 2024 và 2025"
+  },
+  {
+    "question": "Năm 2025 ĐHBK Hà Nội có mở tổ hợp xét tuyển bổ sung nào theo điểm THPT?",
+    "expected_answer": "Năm 2025 xét bổ sung tổ hợp K01 theo điểm thi tốt nghiệp THPT dùng chung cho các ngành.",
+    "expected_context": "xét bổ sung tổ hợp K01"
+  },
+  {
+    "question": "Đối tượng dự thi Đánh giá tư duy gồm những ai?",
+    "expected_answer": "Học sinh bậc THPT và thí sinh tự do (đã tốt nghiệp THPT).",
+    "expected_context": "đối tượng dự thi học sinh THPT thí sinh tự do"
+  },
+  {
+    "question": "Học phí chương trình Khoa học dữ liệu và Trí tuệ nhân tạo (IT-E10) khoảng bao nhiêu?",
+    "expected_answer": "Khoảng 64–67 triệu đồng/năm học theo thông tin học phí ELITECH đặc thù.",
+    "expected_context": "IT-E10 học phí 64 67 triệu đồng/năm học"
+  },
+  {
+    "question": "Điểm chuẩn xét tuyển ĐHBK Hà Nội 2025 được công bố dựa trên cơ sở nào?",
+    "expected_answer": "Dựa trên điểm xét (ĐX) theo từng phương thức/tổ hợp và điểm ưu tiên theo quy chế tuyển sinh.",
+    "expected_context": "điểm chuẩn điểm xét ĐX ưu tiên"
+  }
+]
